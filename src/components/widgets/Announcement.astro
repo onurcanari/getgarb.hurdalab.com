@@ -1,5 +1,24 @@
 ---
+import { Icon } from 'astro-icon/components';
 
+interface Props {
+  button?: {
+    enabled?: boolean;
+    text?: string;
+  };
+  callToAction?: {
+    text?: string;
+    href?: string;
+    icon?: string;
+  };
+  actions?: Array<{
+    text?: string;
+    href?: string;
+    icon?: string;
+  }>;
+}
+
+const { button, callToAction, actions = [] } = Astro.props;
 ---
 
 <div
@@ -9,15 +28,52 @@
     class="dark:bg-slate-700 bg-white/40 dark:text-slate-300 font-semibold px-1 py-0.5 text-xs mr-0.5 rtl:mr-0 rtl:ml-0.5 inline-block"
     >NEW</span
   >
-  <a href="https://astro.build/blog/astro-550/" class="text-muted hover:underline dark:text-slate-400 font-medium"
-    >Astro v5.5 is now available! »</a
+  <a href="#" class="text-muted hover:underline dark:text-slate-400 font-medium"
+    >hurdalab announces new mobile application framework! »</a
   >
   <a
     target="_blank"
     rel="noopener"
     class="ltr:ml-auto rtl:mr-auto w-[5.6rem] h-[1.25rem] ml-auto bg-contain inline-block bg-[url(https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=Stars&maxAge=86400)]"
-    title="If you like AstroWind, give us a star."
-    href="https://github.com/onwidget/astrowind"
+    title="Follow hurdalab on GitHub"
+    href="#"
   >
   </a>
+</div>
+
+<div class="container mx-auto flex justify-center px-4 py-1 flex-col sm:flex-row">
+  {
+    callToAction && (
+      <div class="flex items-center justify-center sm:justify-end flex-1 sm:flex-none gap-4 sm:gap-2">
+        <div class="flex gap-1 items-center text-xs sm:text-sm">
+          {callToAction.href && (
+            <a
+              href={callToAction.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-200 hover:underline justify-center sm:justify-start"
+            >
+              {callToAction.icon && <Icon name={callToAction.icon} class="h-3.5 w-3.5 -ml-0.5" />}
+              {callToAction?.text || 'View our work'}
+            </a>
+          )}
+          {actions && actions.length > 0 && (
+            <>
+              {actions.map((action) => (
+                <a
+                  href={action?.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-200 hover:underline justify-center sm:justify-start"
+                >
+                  {action?.icon && <Icon name={action.icon} class="h-3.5 w-3.5 -ml-0.5" />}
+                  {action?.text}
+                </a>
+              ))}
+            </>
+          )}
+        </div>
+      </div>
+    )
+  }
 </div>

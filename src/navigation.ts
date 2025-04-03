@@ -36,14 +36,7 @@ export const headerData = {
       href: getBlogPermalink(),
     },
   ],
-  actions: [
-    {
-      text: 'Download App',
-      href: '#',
-      target: '_blank',
-      class: 'btn btn-primary btn-sm',
-    },
-  ],
+  actions: [],
 };
 
 export const footerData = {

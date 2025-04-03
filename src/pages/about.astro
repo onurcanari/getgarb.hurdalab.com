@@ -1,4 +1,5 @@
 ---
+import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
@@ -7,7 +8,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Us - hurdalab',
 };
 ---
 
@@ -15,134 +16,85 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About Us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'hurdalab Team',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      We are <span class="text-accent dark:text-white highlight">hurdalab</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      A team of passionate mobile developers dedicated to creating innovative and user-friendly applications that solve
+      real-world problems. With expertise across multiple platforms and technologies, we deliver exceptional digital
+      experiences that exceed client expectations.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Company Statistics"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Team Members', amount: '12' },
+      { title: 'Projects Delivered', amount: '50+' },
+      { title: 'Years Experience', amount: '8' },
+      { title: 'Client Satisfaction', amount: '99%' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Content Widget **************** -->
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <Content
+    isReversed
+    title="Our Mission"
     items={[
       {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+        title: 'Innovation-Driven',
+        description: "We constantly push the boundaries of what's possible with mobile technology.",
       },
       {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+        title: 'User-Focused',
+        description: 'We create applications that prioritize user experience and accessibility.',
       },
       {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+        title: 'Quality-Obsessed',
+        description: 'We maintain the highest standards in every line of code and pixel of design.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1535957998253-26ae1ef29506?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Mission Image',
     }}
-  />
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building for the Future</h3>
+      At hurdalab, we're dedicated to transforming ideas into exceptional mobile experiences. Our mission is to create applications
+      that not only meet current needs but anticipate future ones.
+    </Fragment>
+  </Content>
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Features3 Widget ************** -->
 
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+  <Features3
+    title="Meet Our Leadership"
+    subtitle="Our team is led by experienced professionals with deep expertise in mobile development and product design."
+    columns={2}
+    isBeforeContent={true}
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Furkan Olkay',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'Software Engineer | Mobile Team Lead | Flutter Developer. With years of experience in cross-platform development, Furkan leads our mobile engineering team with expertise in Flutter and React Native.',
+        icon: 'tabler:user',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Onurcan Ari',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Senior Backend Developer with full stack expertise. Specializes in building robust server architectures and APIs that power our mobile applications. Experienced in cloud infrastructure, database optimization, and system integration.',
+        icon: 'tabler:user',
       },
     ]}
   />
@@ -150,30 +102,33 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
+    title="Our Development Approach"
+    subtitle="We follow a structured, collaborative process that ensures your mobile app is delivered on time, within budget, and exceeds expectations."
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Discovery',
+        description:
+          'We start by understanding your business goals, target audience, and technical requirements. This phase includes market research, competitive analysis, and feature prioritization.',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Design & Prototyping',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Our design team creates intuitive wireframes and interactive prototypes that visualize the user experience. We collaborate closely with you to refine the design before development begins.',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Development',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Using the latest technologies and frameworks, our development team builds your application with clean, efficient code. We employ agile methodologies with regular demos and feedback sessions.',
+      },
+      {
+        title: 'Testing & Refinement',
+        description:
+          'Rigorous testing across devices and platforms ensures your app is bug-free and performs optimally. We conduct usability testing, performance testing, and security audits.',
+      },
+      {
+        title: 'Launch & Growth',
+        description:
+          'We handle the app store submission process and provide support during the launch phase. Our partnership continues with analytics, maintenance, and feature enhancements.',
       },
     ]}
   />
@@ -181,25 +136,44 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="Technologies We Use"
+    subtitle="We stay at the forefront of mobile technology to deliver cutting-edge solutions."
+    columns={3}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Flutter',
+        description: 'Cross-platform development for beautiful native apps',
+        icon: 'tabler:brand-flutter',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'React Native',
+        description: 'JavaScript framework for native mobile experiences',
+        icon: 'tabler:brand-react-native',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Native iOS',
+        description: "Swift development for Apple's ecosystem",
+        icon: 'tabler:brand-apple',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Native Android',
+        description: 'Kotlin and Java development for Android devices',
+        icon: 'tabler:brand-android',
+      },
+      {
+        title: 'Firebase',
+        description: 'Backend services for mobile app infrastructure',
+        icon: 'tabler:brand-firebase',
+      },
+      {
+        title: 'GCP',
+        description: 'Google Cloud Platform for scalable and reliable infrastructure',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Supabase',
+        description: 'Open source Firebase alternative with PostgreSQL database',
+        icon: 'tabler:database',
       },
     ]}
   />
@@ -207,21 +181,19 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get In Touch"
+    subtitle="We'd love to hear about your project and how we can help."
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'Email Us',
+        description: 'contact@hurdalab.com',
+        icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: 'Call Us',
+        description: '+90 212 555 1234',
+        icon: 'tabler:phone',
       },
     ]}
   />

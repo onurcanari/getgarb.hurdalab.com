@@ -1,0 +1,87 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'References - hurdalab',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="References"
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'hurdalab References',
+    }}
+  >
+    <Fragment slot="title">
+      Our <span class="text-accent dark:text-white highlight">References</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Take a look at some of our successful projects and collaborations with clients across various industries.
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Mobile Application Development"
+    subtitle="We specialize in creating innovative mobile applications for businesses across various industries."
+    items={[
+      {
+        title: 'E-commerce App',
+        description: 'Fashion marketplace app with advanced filtering and personalized recommendations',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Health & Fitness',
+        description: 'Workout tracking and nutrition planning app with real-time analytics',
+        icon: 'tabler:heartbeat',
+      },
+      {
+        title: 'Food Delivery',
+        description: 'On-demand food delivery platform connecting restaurants and customers',
+        icon: 'tabler:chef-hat',
+      },
+      {
+        title: 'Travel & Hospitality',
+        description: 'Hotel booking and travel management app with personalized experiences',
+        icon: 'tabler:plane',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Enterprise Solutions"
+    subtitle="Our team has developed custom enterprise solutions for leading businesses."
+    items={[
+      {
+        title: 'Banking System',
+        description: 'Secure mobile banking application with advanced transaction processing',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Inventory Management',
+        description: 'Real-time inventory tracking and management system for retail chains',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'CRM Solution',
+        description: 'Custom customer relationship management system with analytics',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'ERP Integration',
+        description: 'Enterprise resource planning system with mobile accessibility',
+        icon: 'tabler:layers-intersect',
+      },
+    ]}
+  />
+</Layout>

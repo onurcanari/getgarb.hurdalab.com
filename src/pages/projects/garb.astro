@@ -1,0 +1,197 @@
+---
+import { Image } from 'astro:assets';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+// Import images directly
+import appStoreImg from '~/assets/images/app-store.png';
+import googlePlayImg from '~/assets/images/google-play.png';
+
+const metadata = {
+  title: 'Garb Project - Mobile Application by hurdalab',
+};
+
+const appStoreDownloadLink = '#';
+const googlePlayDownloadLink = 'https://play.google.com/store/apps/details?id=com.hurdalab.garb';
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Featured Project"
+    image={{
+      src: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Garb Mobile App',
+    }}
+  >
+    <Fragment slot="title">
+      Introducing <br />
+      <span class="text-accent dark:text-white highlight">Garb</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Our innovative mobile application that revolutionizes the way you shop for fashion. With Garb, users can discover,
+      compare, and purchase clothing items from multiple brands all in one place. The app features advanced filtering,
+      personalized recommendations, and a seamless shopping experience.
+    </Fragment>
+
+    <div class="flex flex-col sm:flex-row sm:gap-4 mt-8">
+      <div class="flex max-w-sm">
+        <a href={appStoreDownloadLink}>
+          <Image
+            src={appStoreImg}
+            alt="Download on App Store"
+            width={200}
+            height={60}
+            class="rounded-lg sm:rounded-lg h-auto w-full"
+          />
+        </a>
+      </div>
+      <div class="flex max-w-sm mt-4 sm:mt-0">
+        <a href={googlePlayDownloadLink}>
+          <Image
+            src={googlePlayImg}
+            alt="Get it on Google Play"
+            width={200}
+            height={60}
+            class="rounded-lg sm:rounded-lg h-auto w-full"
+          />
+        </a>
+      </div>
+    </div>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Project Statistics"
+    stats={[
+      { title: 'Active Users', amount: '10K+' },
+      { title: 'Brands', amount: '50+' },
+      { title: 'Products', amount: '10K+' },
+      { title: 'Daily Transactions', amount: '1K+' },
+    ]}
+  />
+
+  <!-- Features Widget ************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What makes Garb special"
+    subtitle="Garb offers a comprehensive set of features designed to make online fashion shopping easier and more enjoyable."
+    items={[
+      {
+        title: 'Advanced Search & Filtering',
+        description:
+          "Find exactly what you're looking for with powerful search capabilities and detailed filtering options.",
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Personalized Recommendations',
+        description: 'Get clothing suggestions based on your preferences, previous purchases, and browsing history.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Multi-brand Shopping',
+        description:
+          'Browse and purchase products from multiple brands in a single application with a unified checkout process.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Size Guidance',
+        description: 'Advanced size recommendation system helps you choose the right fit every time.',
+        icon: 'tabler:ruler-measure',
+      },
+      {
+        title: 'Social Sharing',
+        description: 'Share your favorite items with friends and family directly through the app.',
+        icon: 'tabler:share',
+      },
+      {
+        title: 'Outfit Creator',
+        description: 'Virtual outfit builder helps you mix and match items to create complete looks.',
+        icon: 'tabler:hanger',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Our Development Process"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Research & Planning</span>',
+        description:
+          'We conducted extensive market research to identify user needs and pain points in the fashion e-commerce space.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Design & Prototyping</span>',
+        description:
+          'Our UI/UX team created intuitive, user-friendly interfaces with multiple iterations based on user feedback.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Development</span>',
+        description:
+          'Built using React Native for cross-platform compatibility, with robust backend systems for handling inventory and transactions.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Testing & Refinement</span>',
+        description:
+          'Rigorous testing across multiple devices and user scenarios to ensure a smooth, bug-free experience.',
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Step 5: <span class="font-medium">Launch & Continuous Improvement</span>',
+        description:
+          'After successful launch, we continue to add features and improvements based on user feedback and market trends.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Garb App Development Process',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <div class="mt-14 max-w-3xl mx-auto flex flex-col gap-4 md:gap-8 mb-20">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold">Download Garb Today</h2>
+      <p class="mt-4 text-lg">Experience the future of fashion shopping with our Garb mobile application.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+      <div class="flex max-w-xs">
+        <a href={appStoreDownloadLink}>
+          <Image
+            src={appStoreImg}
+            alt="Download on App Store"
+            width={200}
+            height={60}
+            class="rounded-lg sm:rounded-lg h-auto w-full"
+          />
+        </a>
+      </div>
+      <div class="flex max-w-xs">
+        <a href={googlePlayDownloadLink}>
+          <Image
+            src={googlePlayImg}
+            alt="Get it on Google Play"
+            width={200}
+            height={60}
+            class="rounded-lg sm:rounded-lg h-auto w-full"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

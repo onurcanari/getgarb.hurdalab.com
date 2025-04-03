@@ -1,0 +1,136 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Our Clients - hurdalab',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Our Clients"
+    image={{
+      src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
+      alt: 'hurdalab Clients',
+    }}
+  >
+    <Fragment slot="title">
+      Trusted by <span class="text-accent dark:text-white highlight">Industry Leaders</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We're proud to collaborate with innovative companies across various industries. Our clients trust us to deliver
+      high-quality mobile applications that drive their business forward.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Retail & E-commerce"
+    items={[
+      {
+        title: 'Fashion Forward',
+        description:
+          'Leading clothing retailer with over 200 stores nationwide. We developed their mobile shopping app that increased online sales by 35%.',
+      },
+      {
+        title: 'HomeGoods Plus',
+        description:
+          'Home decor and furniture marketplace. Our custom inventory management app streamlined their operations across 50 locations.',
+      },
+      {
+        title: 'TechGadget',
+        description:
+          'Electronics retailer specializing in the latest technology. Their mobile app features AR product visualization and seamless checkout.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Retail Clients',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Leading retail brands</h3>
+      Partnering with major retailers to create engaging mobile shopping experiences.
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Finance & Banking"
+    items={[
+      {
+        title: 'Global Finance',
+        description:
+          'International banking institution with operations in 15 countries. We developed their secure mobile banking platform with biometric authentication.',
+      },
+      {
+        title: 'Investment First',
+        description:
+          'Wealth management firm serving high-net-worth clients. Their custom investment tracking app provides real-time portfolio insights.',
+      },
+      {
+        title: 'Secure Payments',
+        description:
+          'Leading payment processor handling millions of transactions daily. We built their fraud detection system with machine learning capabilities.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620067925093-311f8b963751?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Finance Clients',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Financial institutions</h3>
+      Creating secure and innovative mobile solutions for the banking industry.
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Other Industries"
+    subtitle="Our expertise extends to many sectors, providing tailored mobile solutions for each unique challenge."
+    columns={3}
+    items={[
+      {
+        title: 'Healthcare',
+        description: 'Telehealth platforms and patient management systems',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: 'Hospitality',
+        description: 'Hotel booking and guest experience applications',
+        icon: 'tabler:bed',
+      },
+      {
+        title: 'Education',
+        description: 'Learning management systems and educational apps',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Transportation',
+        description: 'Ride-sharing and logistics management solutions',
+        icon: 'tabler:truck',
+      },
+      {
+        title: 'Entertainment',
+        description: 'Streaming services and content delivery platforms',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: 'Real Estate',
+        description: 'Property search and management applications',
+        icon: 'tabler:building',
+      },
+    ]}
+  />
+</Layout>

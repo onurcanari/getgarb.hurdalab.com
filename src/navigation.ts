@@ -22,6 +22,10 @@ export const headerData = {
           href: getPermalink('/projects/garb'),
         },
         {
+          text: 'Loud Space',
+          href: getPermalink('/projects/loud-space'),
+        },
+        {
           text: 'Other Projects',
           href: getPermalink('/projects'),
         },

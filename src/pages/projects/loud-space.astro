@@ -1,0 +1,263 @@
+---
+import { Image } from 'astro:assets';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+// Import images directly
+import appStoreImg from '~/assets/images/app-store.png';
+import googlePlayImg from '~/assets/images/google-play.png';
+
+const metadata = {
+  title: 'Loud Space - Express, Connect, and Heal by hurdalab',
+};
+
+const appStoreDownloadLink = '#';
+const googlePlayDownloadLink = '#';
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Featured Project"
+    image={{
+      src: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Loud Space - Mental Health App',
+    }}
+  >
+    <Fragment slot="title">
+      Welcome to <br />
+      <span class="text-accent dark:text-white highlight">Loud Space</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      A safe, anonymous platform where you can share your mental health experiences, express your emotions, and connect
+      with others in a supportive community. Our app is designed to help you explore your inner world, find guidance,
+      and grow through shared stories and expert resources.
+    </Fragment>
+
+    <div class="flex flex-col sm:flex-row sm:gap-4 mt-8">
+      <div class="flex max-w-sm">
+        <a href={appStoreDownloadLink}>
+          <Image
+            src={appStoreImg}
+            alt="Download on App Store"
+            width={200}
+            height={60}
+            class="rounded-lg sm:rounded-lg h-auto w-full"
+          />
+        </a>
+      </div>
+      <div class="flex max-w-sm mt-4 sm:mt-0">
+        <a href={googlePlayDownloadLink}>
+          <Image
+            src={googlePlayImg}
+            alt="Get it on Google Play"
+            width={200}
+            height={60}
+            class="rounded-lg sm:rounded-lg h-auto w-full"
+          />
+        </a>
+      </div>
+    </div>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Community Impact"
+    stats={[
+      { title: 'Active Users', amount: 'Growing' },
+      { title: 'Shared Stories', amount: 'Daily' },
+      { title: 'Community Groups', amount: 'Global' },
+      { title: 'Expert Resources', amount: 'Diverse' },
+    ]}
+  />
+
+  <!-- Features Widget ************** -->
+
+  <Features
+    id="features"
+    tagline="Key Features"
+    title="Why Choose Loud Space?"
+    subtitle="Our platform offers a comprehensive set of features designed to support mental wellness through authentic conversation and shared experiences."
+    items={[
+      {
+        title: 'Dynamic Post Feed',
+        description:
+          'Stay updated with real-time posts and inspiring stories from the community. Our intuitive feed ensures each post is easy to read and engage with.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Community Moderation',
+        description:
+          'Our platform ensures a safe environment through active community moderation. Trained moderators review content to maintain supportive and respectful discussions.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Resource Recommendations',
+        description:
+          'Discover carefully curated articles, videos, and podcasts on mental wellness, mindfulness, and stress management.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Personal Profile & Dashboard',
+        description:
+          'Manage your account securely while reviewing your posts, track personal growth, and engage with community discussions.',
+        icon: 'tabler:user-circle',
+      },
+      {
+        title: 'Safe and Anonymous Sharing',
+        description:
+          'Express yourself freely without compromising your privacy. Share openly and connect without fear.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'User-Centric Design',
+        description:
+          'With a mobile-first, responsive layout, our platform offers an intuitive experience on any device.',
+        icon: 'tabler:device-mobile',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Our Approach"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Express</span>',
+        description:
+          'Share your story in a safe, supportive environment. Write about your experiences, feelings, and challenges without judgment.',
+        icon: 'tabler:message',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Connect</span>',
+        description:
+          'Find others with similar experiences. Build connections, offer support, and receive encouragement from a community that understands.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Learn</span>',
+        description:
+          'Access expert resources and practical tools to better understand your mental health and develop coping strategies.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Heal</span>',
+        description:
+          'Experience the transformative power of sharing, connecting, and learning in a supportive community dedicated to mental health.',
+        icon: 'tabler:heart',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620147461831-a97b99ade1d3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Loud Space Community Support',
+    }}
+  />
+
+  <!-- About Section ****************** -->
+
+  <div class="py-12 bg-gray-50 dark:bg-slate-800 rounded-xl p-8 my-12">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+      <p class="text-lg mb-6">
+        At Loud Space, we believe that sharing your story can be a powerful step toward healing. Our mission is to
+        create a community that supports mental wellness through authentic conversation, expert guidance, and shared
+        personal experiences.
+      </p>
+      <p class="text-lg">
+        We are committed to offering a space where every voice is heard and every emotion is validated. Our team
+        continues to innovate based on user feedback, with regular updates and new features designed to make your
+        experience even more rewarding.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Section ****************** -->
+
+  <div class="max-w-3xl mx-auto mb-20">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+      <p class="text-lg mb-8">Have questions or suggestions? We'd love to hear from you:</p>
+      <div class="flex justify-center items-center">
+        <div class="flex gap-2 items-center">
+          <span class="text-accent"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-mail"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path
+                d="M3 7l9 6l9 -6"></path></svg
+            ></span
+          >
+          <span>hurdalab@gmail.com</span>
+        </div>
+      </div>
+      <div class="flex justify-center gap-6 mt-8">
+        <a href="#" class="text-accent hover:text-gray-800 dark:hover:text-white transition-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-twitter"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"
+            ></path></svg
+          >
+        </a>
+        <a href="#" class="text-accent hover:text-gray-800 dark:hover:text-white transition-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-instagram"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path><path
+              d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M16.5 7.5l0 .01"></path></svg
+          >
+        </a>
+        <a href="#" class="text-accent hover:text-gray-800 dark:hover:text-white transition-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-facebook"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path></svg
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

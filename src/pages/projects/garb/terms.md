@@ -5,11 +5,11 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 # Terms of Use – Garb: Wardrobe Outfit Stylist
 
-**Effective Date:** [Insert Date]
+**Effective Date:** November 19, 2023
 
 Welcome to **Garb - Wardrobe Outfit Stylist**. These Terms of Use ("Terms") govern your access to and use of the Garb mobile application ("App") provided by Hurdalab ("we", "us", or "our").
 
-By downloading, accessing, or using the App, you agree to be bound by these Terms and our [Privacy Policy](https://hurdalab.com/privacy-policy).
+By downloading, accessing, or using the App, you agree to be bound by these Terms and our [Privacy Policy](https://hurdalab.com/projects/garb/privacy).
 
 ## 1. Subscription & Payment
 
